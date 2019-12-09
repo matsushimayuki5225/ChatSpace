@@ -10,8 +10,7 @@
 
 ### Association
 - has_many :comments
-- has_many :groups
-- has_many :groups_users
+- has_many :groups , hrough: :groups_users
 
 
 ## comment　table
@@ -33,8 +32,7 @@
 |group_id|integer|null: false, foreign_key: true|
 
 # Association
-- has_many :groups_users
-- has_many :users
+- has_many :users , hrough: :groups_users
   has_many :comments
 
 
@@ -46,7 +44,7 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many:group_id
-- has_many:user_id
+- has_many:groups
+- has_many:users 
 
 
