@@ -14,8 +14,8 @@
 ## comment　table
 |Column|Type|Options|
 |------|----|-------|
-|image|string|
-|text|text|
+|image|string|foreign_key: true｜
+|view|text|foreign_key: true｜
 
 ### Association
 - belongs_to :user
