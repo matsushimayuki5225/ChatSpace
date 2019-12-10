@@ -1,41 +1,38 @@
 # README
 ## users　table
-
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |password|text|null: false, foreign_key: true|
 |name|string|null:false, foreign_key: true|
 |mail address|text|null: false, foreign_key: true|
+|password|string|null: false|
+|name|string|null:false|
+|mail address|text|null: false|
 
 ### Association
 - has_many :comments
-- has_many :groups , hrough: :groups_users
-
+- has_many :groups, through: :groups_users
 
 ## comment　table
-
 |Column|Type|Options|
 |------|----|-------|
-|image|string|null: false, foreign_key: true|
-|text|string|null: false, foreign_key: true|
+|image|string|null: false|
+|text|text|null: false|
 
 ### Association
 - belongs_to :user
 - belongs_to :group
 
-
 ## group table
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
 
-# Association
-- has_many :users , hrough: :groups_users
+|name|string|null: false|
+
+### Association
+- has_many :users , through: :groups_users
   has_many :comments
-
-
 
 ## groups_users　table
 |Column|Type|Options|
@@ -44,7 +41,5 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many:groups
-- has_many:users 
-
-
+  belongs_to:group
+  belongs_to:user
