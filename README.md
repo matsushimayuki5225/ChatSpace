@@ -2,10 +2,6 @@
 ## users　table
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|password|text|null: false, foreign_key: true|
-|name|string|null:false, foreign_key: true|
-|mail address|text|null: false, foreign_key: true|
 |password|string|null: false|
 |name|string|null:false|
 |mail address|text|null: false|
